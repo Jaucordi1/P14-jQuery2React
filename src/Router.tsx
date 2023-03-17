@@ -1,6 +1,6 @@
 import {lazy, Suspense} from 'react'
 import {createBrowserRouter, Outlet, NavLink, NavLinkProps} from 'react-router-dom'
-import {Navigation} from "./components/navigation/Navigation";
+import {Navigation} from "./components/Navigation/Navigation";
 
 const HomePage = lazy(() => import('./pages/home/HomePage'));
 const EmployeesPage = lazy(() => import('./pages/employees/EmployeesPage'));

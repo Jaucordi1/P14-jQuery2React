@@ -1,5 +1,5 @@
 import Classes from './Navigation.module.scss'
-import {Link} from "../../Router";
+import {Link} from '../../Router'
 
 export function Navigation() {
     return (
