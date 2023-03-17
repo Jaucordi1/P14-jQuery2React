@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  > label {
+    margin-bottom: .25em;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  > input {
+    padding: .5em;
+
+    &:is([type="date"])::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+    }
+  }
+}
