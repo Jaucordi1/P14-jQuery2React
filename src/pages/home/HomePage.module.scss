@@ -4,3 +4,19 @@
   place-content: flex-start;
   place-items: center;
 }
+
+.form {
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  place-content: flex-start;
+  place-items: center;
+
+  > *:is(:not(.button)) {
+    width: 100%;
+  }
+}
+
+.button {
+  padding: .5rem;
+}
