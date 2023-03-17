@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  > label {
+    margin-bottom: .25em;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  > select {
+    padding: .5em;
+    cursor: pointer;
+  }
+
+  > label:is(:disabled),
+  > select:is(:disabled) {
+    cursor: not-allowed;
+  }
+}
