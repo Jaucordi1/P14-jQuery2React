@@ -1,12 +1,14 @@
 .App {
     display: flex;
     flex-direction: column;
-    place-items: flex-start;
     place-content: flex-start;
+    place-items: stretch;
 
     width: 100%;
-    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 
+    min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
 }
