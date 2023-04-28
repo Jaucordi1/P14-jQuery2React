@@ -67,6 +67,7 @@ function leadingZero(num: number): string {
 
 export default function HomePage() {
     const dispatch = useAppDispatch();
+    const dateToString = (date: Date) => date.toLocaleDateString('fr-CA', {year: 'numeric', month: '2-digit', day: '2-digit'})
 
     return (
         <main className={Classes.page}>
@@ -107,19 +108,11 @@ export default function HomePage() {
                                    value={values.personalInformation.lastname}
                                    onChange={event => setFieldValue('personalInformation.lastname', event.target.value)} />
                             <Input id="birthdate" label="Date of Birth" type="date" name="birthdate"
-                                   value={[
-                                       values.personalInformation.birthdate.getFullYear(),
-                                       leadingZero(values.personalInformation.birthdate.getMonth() + 1),
-                                       leadingZero(values.personalInformation.birthdate.getDate()),
-                                   ].join('-')}
-                                   onChange={event => setFieldValue('personalInformation.birthdate', Date.parse(event.target.value))} />
+                                   value={dateToString(values.personalInformation.birthdate)}
+                                   onChange={event => setFieldValue('personalInformation.birthdate', new Date(event.target.value))} />
                             <Input id="start-date" label="Start Date" type="date" name="start-date"
-                                   value={[
-                                       values.startDate.getFullYear(),
-                                       leadingZero(values.startDate.getMonth() + 1),
-                                       leadingZero(values.startDate.getDate()),
-                                   ].join('-')}
-                                   onChange={event => setFieldValue('startDate', Date.parse(event.target.value))} />
+                                   value={dateToString(values.startDate)}
+                                   onChange={event => setFieldValue('startDate', new Date(event.target.value))} />
                             <Fieldset legend="Address">
                                 <Input id="street" label="Street" type="text" name="street" autoComplete="street"
                                        value={values.personalInformation.address.street}
