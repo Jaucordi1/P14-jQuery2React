@@ -1,8 +1,9 @@
 import Classes from './Button.module.scss'
 import React from 'react'
+import classNames from "classnames";
 
-export function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
+export function Button({className, ...props}: React.ButtonHTMLAttributes<HTMLButtonElement>) {
     return (
-        <button className={Classes.button} {...props} />
+        <button {...props} className={classNames(Classes.button, className)} />
     )
 }
