@@ -1,5 +1,4 @@
 import type {IAddress} from "../address/IAddress";
-import type {DepartmentType} from "./DepartmentType";
 
 export interface IPersonalInformation {
     firstname: string;
@@ -15,7 +14,7 @@ export interface IPersonalInformationSerialized extends Omit<IPersonalInformatio
 export interface IEmployee {
     id: number;
     personalInformation: IPersonalInformation;
-    department: DepartmentType;
+    department: string;
     startDate: Date;
 }
 
