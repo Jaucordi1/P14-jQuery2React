@@ -6,19 +6,12 @@
 }
 
 .form {
-  min-width: 400px;
+  max-width: 700px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   place-content: flex-start;
   place-items: center;
-
-  > *:is(:not(.button)) {
-    width: 100%;
-  }
-}
-
-.button {
-  padding: .5rem;
 }
 
 .modalCloseBtn {
@@ -41,4 +34,21 @@
   width: 30px;
   font-size: 1.4em !important;
   border: 1px solid white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: stretch;
+  gap: 1em;
+  width: 100%;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  place-content: flex-start;
+  place-items: stretch;
+  gap: 1em;
+  width: 100%;
 }

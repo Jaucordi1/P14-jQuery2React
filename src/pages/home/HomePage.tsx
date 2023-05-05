@@ -152,35 +152,41 @@ export default function HomePage() {
                                 {!isSubmitting && "Resource successfully created!"}
                             </Modal>
 
-                            {/*<Field as={Input} name="personalInformation.firstname" label="First Name" placeholder="John" />*/}
+                            <div id="columns" className={Classes.row}>
+                                <Fieldset legend="Address" className={Classes.col}>
+                                    <Field as={TextField} name="personalInformation.address.street" autoComplete="street"
+                                           label="Street" placeholder="123…" />
 
-                            <Field as={TextField} name="personalInformation.firstname" autoComplete="firstname"
-                                   label="First Name"
-                                   placeholder="John" />
+                                    <Field as={TextField} name="personalInformation.address.city" autoComplete="city"
+                                           label="City" placeholder="Paris" />
 
-                            <Field as={TextField} name="personalInformation.lastname" autoComplete="lastname"
-                                   label="Last Name"
-                                   placeholder="Doe" />
+                                    <Dropdown label="State" options={STATES} name="personalInformation.address.state" />
 
-                            <Field as={DateField} name="personalInformation.birthdate" autoComplete="birthdate"
-                                   label="Date of Birth" />
+                                    <Field as={TextField} name="personalInformation.address.zipcode" autoComplete="zipcode"
+                                           label="Zip Code" placeholder="64000" />
+                                </Fieldset>
+                                <div className={Classes.col}>
+                                    <Fieldset legend="Personal Information">
+                                        <Field as={TextField} name="personalInformation.firstname" autoComplete="firstname"
+                                               label="First Name"
+                                               placeholder="John" />
 
-                            <Field as={DateField} name="startDate" label="Start Date" />
+                                        <Field as={TextField} name="personalInformation.lastname" autoComplete="lastname"
+                                               label="Last Name"
+                                               placeholder="Doe" />
 
-                            <Fieldset legend="Address">
-                                <Field as={TextField} name="personalInformation.address.street" autoComplete="street"
-                                       label="Street" placeholder="123…" />
+                                        <Field as={DateField} name="personalInformation.birthdate" autoComplete="birthdate"
+                                               label="Date of Birth" />
+                                    </Fieldset>
+                                    <Fieldset legend="Job">
+                                        <Field as={DateField} name="startDate" label="Start Date" />
 
-                                <Field as={TextField} name="personalInformation.address.city" autoComplete="city"
-                                       label="City" placeholder="Paris" />
+                                        <Dropdown label="Department" options={DEPARTMENTS} name="department" />
+                                    </Fieldset>
+                                </div>
+                            </div>
 
-                                <Dropdown label="State" options={STATES} name="personalInformation.address.state" />
-
-                                <Field as={TextField} name="personalInformation.address.zipcode" autoComplete="zipcode"
-                                       label="Zip Code" placeholder="64000" />
-                            </Fieldset>
-
-                            <Dropdown label="Department" options={DEPARTMENTS} name="department" />
+                            <br/>
 
                             <Button type="submit" className={Classes.button}>Save</Button>
                         </Form>
