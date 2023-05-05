@@ -1,19 +1,28 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 
-  > label {
+  label {
     margin-bottom: .25em;
     font-weight: 600;
     cursor: pointer;
   }
 
-  > input {
+  .input {
+    //width: 100%;
     padding: .5em;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
 
     &:is([type="date"])::-webkit-calendar-picker-indicator {
       cursor: pointer;
+    }
+
+    &.error {
+      border-color: red;
     }
   }
 }
