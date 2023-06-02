@@ -9,15 +9,15 @@ export default function EmployeesPage() {
         <main className={Classes.page}>
             <h1>Current Employees</h1>
             <Table lines={employees} columns={{
-                'personalInformation.firstname': 'Firstname',
-                'personalInformation.lastname': 'Lastname',
-                startDate: 'Start date',
+                'personalInformation.firstname': 'First Name',
+                'personalInformation.lastname': 'Last Name',
+                startDate: 'Start Date',
                 department: 'Department',
                 'personalInformation.birthdate': 'Date of Birth',
                 'personalInformation.address.street': 'Street',
                 'personalInformation.address.city': 'City',
                 'personalInformation.address.state': 'State',
-                'personalInformation.address.zipcode': 'Zipcode',
+                'personalInformation.address.zipcode': 'Zip Code',
             }} />
         </main>
     )
