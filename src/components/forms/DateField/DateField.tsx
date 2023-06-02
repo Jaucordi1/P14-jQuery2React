@@ -37,6 +37,7 @@ export function DateField<P extends FieldHookConfig<Date>>(props: P & DateField)
                             [Classes.error]: meta.touched && !!meta.error,
                         })}
                         autoComplete={props.autoComplete}
+                        id={props.id}
             />
             {/*<input {...field} type="date" name={props.name} id={props.id} placeholder={props.placeholder}
                    autoComplete={props.autoComplete} className={classNames(Classes.input, {

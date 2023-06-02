@@ -155,33 +155,31 @@ export default function HomePage() {
                             <div id="columns" className={Classes.row}>
                                 <Fieldset legend="Address" className={Classes.col}>
                                     <Field as={TextField} name="personalInformation.address.street" autoComplete="street"
-                                           label="Street" placeholder="123…" />
+                                           label="Street" placeholder="123…" id="street" />
 
                                     <Field as={TextField} name="personalInformation.address.city" autoComplete="city"
-                                           label="City" placeholder="Paris" />
+                                           label="City" placeholder="Paris" id="city" />
 
-                                    <Dropdown label="State" options={STATES} name="personalInformation.address.state" />
+                                    <Dropdown label="State" options={STATES} name="personalInformation.address.state" id="state" />
 
                                     <Field as={TextField} name="personalInformation.address.zipcode" autoComplete="zipcode"
-                                           label="Zip Code" placeholder="64000" />
+                                           label="Zip Code" placeholder="64000" id="zipcode" />
                                 </Fieldset>
                                 <div className={Classes.col}>
                                     <Fieldset legend="Personal Information">
                                         <Field as={TextField} name="personalInformation.firstname" autoComplete="firstname"
-                                               label="First Name"
-                                               placeholder="John" />
+                                               label="First Name" placeholder="John" id="firstname" />
 
                                         <Field as={TextField} name="personalInformation.lastname" autoComplete="lastname"
-                                               label="Last Name"
-                                               placeholder="Doe" />
+                                               label="Last Name" placeholder="Doe" id="lastname" />
 
                                         <Field as={DateField} name="personalInformation.birthdate" autoComplete="birthdate"
-                                               label="Date of Birth" />
+                                               label="Date of Birth" id="birthdate" />
                                     </Fieldset>
                                     <Fieldset legend="Job">
-                                        <Field as={DateField} name="startDate" label="Start Date" />
+                                        <Field as={DateField} name="startDate" label="Start Date" id="startDate" />
 
-                                        <Dropdown label="Department" options={DEPARTMENTS} name="department" />
+                                        <Dropdown label="Department" options={DEPARTMENTS} name="department" id="department" />
                                     </Fieldset>
                                 </div>
                             </div>

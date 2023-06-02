@@ -26,7 +26,7 @@ type Props<T extends string | number = string> = {
 >;
 
 export function Dropdown<Option extends string | number>(props: Props<Option>) {
-    const {label, ...restProps} = props;
+    const {label, id, ...restProps} = props;
     const {setFieldValue, getFieldMeta, getFieldProps} = useFormikContext();
     const field = getFieldProps(props);
     const meta = getFieldMeta(props.name);
@@ -51,10 +51,9 @@ export function Dropdown<Option extends string | number>(props: Props<Option>) {
         }
     });
 
-    console.debug(meta.touched, !!meta.error, meta.error);
     return (
         <div className={TextFieldClasses.wrapper}>
-            <label htmlFor={props.id}>{label}</label>
+            <label htmlFor={id}>{label}</label>
             <Select {...restProps} {...field} value={value} onChange={val => {
                 const _val = val as DropdownItem<Option>[] | DropdownItem<Option>;
                 const isArray = Array.isArray(_val);
@@ -68,30 +67,9 @@ export function Dropdown<Option extends string | number>(props: Props<Option>) {
                 control: p => classNames(TextFieldClasses.input, Classes.input, {
                     [TextFieldClasses.error]: !!meta.error,
                 }),
-            }} onBlur={field.onBlur} />
+            }} onBlur={field.onBlur} inputId={id} />
             <ErrorMessage name={props.name} className={TextFieldClasses.error}
                           render={error => <InputError error={error} />} />
         </div>
     );
-    /*return (
-        <div className={Classes.wrapper}>
-            <label htmlFor={props.id}>{label}</label>
-            <Select {...field} {...props} className={classNames(Classes.select, Classes.input, {
-                [Classes.error]: meta.touched && !!meta.error,
-            })} />
-        </div>
-    );*/
-    /*return (
-        <div className={Classes.wrapper}>
-            <label htmlFor={props.id}>{label}</label>
-            <select {...field} className={classNames(Classes.select, Classes.input, {
-                [Classes.error]: meta.touched && !!meta.error,
-            })}>
-                {items.map(item => (
-                    <option key={item.value} value={item.value}>{item.name}</option>
-                ))}
-            </select>
-            <ErrorMessage name={props.name} className={Classes.error} render={error => <InputError error={error} /> } />
-        </div>
-    )*/
 }
