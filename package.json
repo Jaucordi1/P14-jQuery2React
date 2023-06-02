@@ -12,7 +12,7 @@
     "serve": "serve dist -s"
   },
   "dependencies": {
-    "@jaucordi1/react-table-component": "^1.0.2",
+    "smart-react-table": "^1.0.2",
     "@reduxjs/toolkit": "^1.9.3",
     "classnames": "^2.3.2",
     "formik": "^2.2.9",

@@ -1,5 +1,5 @@
 import Classes from './Employees.module.scss'
-import {Table} from "@jaucordi1/react-table-component";
+import {Table} from "smart-react-table";
 import {useEmployees} from "../../hooks/useEmployees";
 
 export default function EmployeesPage() {
