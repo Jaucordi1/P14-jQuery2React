@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "rm -rf dist",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preserve": "pnpm run build",
+    "serve": "serve dist -s"
   },
   "dependencies": {
     "@jaucordi1/react-table-component": "^1.0.2",
@@ -32,6 +35,7 @@
     "@types/react-modal": "^3.16.0",
     "@vitejs/plugin-react": "^3.1.0",
     "sass": "^1.59.3",
+    "serve": "^14.2.0",
     "vite": "^4.2.0"
   }
 }
