@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Sales",
+    "abbreviation": "sales"
+  },
+  {
+    "name": "Marketing",
+    "abbreviation": "marketing"
+  },
+  {
+    "name": "Engineering",
+    "abbreviation": "engineering"
+  },
+  {
+    "name": "Human Resources",
+    "abbreviation": "hr"
+  },
+  {
+    "name": "Legal",
+    "abbreviation": "legal"
+  }
+]
