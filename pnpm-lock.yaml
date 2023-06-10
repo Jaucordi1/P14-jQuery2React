@@ -20,7 +20,7 @@ specifiers:
   redux: ^4.2.1
   sass: ^1.59.3
   serve: ^14.2.0
-  smart-react-table: ^1.0.2
+  smart-react-table: ^1.0.3
   typescript: ^5.0.2
   vite: ^4.2.0
   yup: ^1.0.2
@@ -37,7 +37,7 @@ dependencies:
   react-router-dom: 6.9.0_biqbaboplfbrettd7655fr4n2y
   react-select: 5.7.3_zula6vjvt3wdocc4mwcxqa6nzi
   redux: 4.2.1
-  smart-react-table: 1.0.2_react@18.2.0
+  smart-react-table: 1.0.3_react@18.2.0
   typescript: 5.0.2
   yup: 1.0.2
 
@@ -1891,8 +1891,8 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
-  /smart-react-table/1.0.2_react@18.2.0:
-    resolution: {integrity: sha512-fZGVd+fBf3vmxTWYAwBWVCjadz+aXB13CbznkYZqA2Oh7HnJClrvWaezU/74bqS3S1KgAHp6Hg7iIksC2z9CAg==}
+  /smart-react-table/1.0.3_react@18.2.0:
+    resolution: {integrity: sha512-1RVpQHsAUBQ3lCqndkZM9KUsyqu62D6MXIDYh1puCgL83yN1JvHJYxCsUaeh7yrsPwGXB9Qn4nQRTQ+LY6HocA==}
     peerDependencies:
       react: '>=17'
     dependencies:
