@@ -40,7 +40,7 @@ const validationSchema = yup.object({
     }).required(),
     startDate: yup.date().required("Employee start date is mandatory."),
     department: yup.string()
-        .oneOf(STATES.map(dep => dep.abbreviation).filter(v => v.length > 0))
+        .oneOf(DEPARTMENTS.map(dep => dep.abbreviation).filter(v => v.length > 0))
         .required("Employee department is mandatory."),
 });
 
@@ -131,7 +131,7 @@ export default function HomePage() {
                                     <Field as={TextField} name="personalInformation.address.city" autoComplete="city"
                                            label="City" placeholder="Paris" id="city" />
 
-                                    <Dropdown label="State" options={STATE_ITEMS} id="state"
+                                    <Dropdown label="State" options={STATE_ITEMS} id="personalInformation.address.state"
                                               name="personalInformation.address.state" />
 
                                     <Field as={TextField} name="personalInformation.address.zipcode"

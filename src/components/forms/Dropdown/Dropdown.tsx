@@ -65,9 +65,9 @@ export function Dropdown<Option extends string | number>(props: Props<Option>) {
                 }
             }} classNames={{
                 control: p => classNames(TextFieldClasses.input, Classes.input, {
-                    [TextFieldClasses.error]: !!meta.error,
+                    [TextFieldClasses.error]: meta.touched && !!meta.error,
                 }),
-            }} onBlur={field.onBlur} inputId={id} />
+            }} inputId={id} />
             <ErrorMessage name={props.name} className={TextFieldClasses.error}
                           render={error => <InputError error={error} />} />
         </div>
