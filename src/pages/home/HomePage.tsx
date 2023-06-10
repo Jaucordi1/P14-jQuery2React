@@ -44,10 +44,6 @@ const validationSchema = yup.object({
         .required("Employee department is mandatory."),
 });
 
-function leadingZero(num: number): string {
-    return num < 10 ? `0${num}` : num.toString(10);
-}
-
 Modal.setAppElement("#root");
 const modalStyles = {
     overlay: {
@@ -68,11 +64,6 @@ export default function HomePage() {
     const dispatch = useAppDispatch();
     const [modalOpened, setModalOpened] = React.useState(false);
     const closeModal = () => setModalOpened(false);
-    const dateToString = (date: Date) => date.toLocaleDateString("fr-CA", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-    });
     const handleSubmit = async (values: Omit<IEmployee, "id">, formikHelpers: FormikHelpers<Omit<IEmployee, "id">>) => {
         formikHelpers.setSubmitting(true);
         setModalOpened(true);
